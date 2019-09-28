@@ -13,8 +13,7 @@
     "npm": ">=5"
   },
   "scripts": {
-    "test": "node scripts/test.js --env=jsdom",
-    "test:watch": "react-scripts test --env=jsdom",
+    "test": "jest -i",
     "build": "rollup -c",
     "start": "rollup -c -w",
     "prepare": "yarn run build",
