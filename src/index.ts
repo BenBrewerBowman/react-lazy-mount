@@ -1,1 +1,2 @@
-export { default as LazyMount } from './LazyMount';
+import LazyMount from './LazyMount';
+export default LazyMount;
