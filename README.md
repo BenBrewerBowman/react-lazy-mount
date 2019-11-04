@@ -62,10 +62,10 @@ export const Example = () => {
 
 Lazy mounting can be coupled with lazy loading to wait for a condition to be met in order to both load the module and render the component.
 
-| Props | Description |
-| ----------- | ----------- |
-| trigger | `Boolean` that once set to true the first time, will render the `children` props regardless of  |
-| children | `ReactNode` component(s) to lazily mount once the trigger becomes true |
+| Props | Type | Default Value | Description 
+| ----------- | ----------- | ------- | --------
+| trigger | Boolean | false | Trigger that listens for the first truthy value to render the `children` prop
+| children | ReactNode[] | | Component(s) that will be mounted once the trigger becomes true for the first time, and stay mounted regardless of any future trigger changes.
 
 ## License
 
