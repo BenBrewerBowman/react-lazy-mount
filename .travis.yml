@@ -1,13 +1,14 @@
 language: node_js
 node_js:
-- 10
+  - 10
+script:
+  - npm install -g rollup
+  - npm run build
 before_deploy:
-- npm install -g rollup
-- npm run build
-- cp ./package.json ./dist/package.json
-- cp ./README.md ./dist/README.md
-- cp ./LICENSE ./dist/LICENSE
-- cd dist
+  - cp ./package.json ./dist/package.json
+  - cp ./README.md ./dist/README.md
+  - cp ./LICENSE ./dist/LICENSE
+  - cd dist
 deploy:
   provider: npm
   email: "$NPM_EMAIL"
