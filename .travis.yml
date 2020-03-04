@@ -1,6 +1,14 @@
 language: node_js
 node_js:
-  - 10
+- 10
 before_deploy:
-  - npm run build
-  - cd dist
+- npm run build
+- cd dist
+deploy:
+  provider: npm
+  email: "$NPM_EMAIL"
+  api_key:
+    secure: "$NPM_API_TOKEN"
+  on:
+    tags: true
+    repo: BenBrewerBowman/react-lazy-mount
