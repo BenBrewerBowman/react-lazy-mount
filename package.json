@@ -14,7 +14,7 @@
   },
   "scripts": {
     "test": "jest -i",
-    "build": "rollup -c; cp ./package.json ./dist/package.json; cp ./README.md ./dist/README.md; cp ./LICENSE ./dist/LICENSE",
+    "build": "rollup -c;",
     "start": "rollup -c -w",
     "prepare": "yarn run build",
     "predeploy": "cd example && yarn install && yarn run build",
