@@ -1,20 +1,20 @@
 {
   "name": "react-lazy-mount",
-  "version": "1.0.2",
+  "version": "1.1.1",
   "description": "Lazy mount react components once a certain condition is met.",
   "author": "BenBrewerBowman",
   "license": "MIT",
   "repository": "BenBrewerBowman/react-lazy-mount",
-  "main": "dist/index.js",
-  "module": "dist/index.es.js",
-  "jsnext:main": "dist/index.es.js",
+  "main": "index.js",
+  "module": "index.es.js",
+  "jsnext:main": "index.es.js",
   "engines": {
     "node": ">=8",
     "npm": ">=5"
   },
   "scripts": {
     "test": "jest -i",
-    "build": "rollup -c",
+    "build": "rollup -c; cp ./package.json ./dist/package.json; cp ./README.md ./dist/README.md; cp ./LICENSE ./dist/LICENSE",
     "start": "rollup -c -w",
     "prepare": "yarn run build",
     "predeploy": "cd example && yarn install && yarn run build",
