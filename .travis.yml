@@ -12,3 +12,4 @@ deploy:
   on:
     branch: master
     tags: true
+    repo: BenBrewerBowman/react-lazy-mount
