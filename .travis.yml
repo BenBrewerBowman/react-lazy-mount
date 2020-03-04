@@ -11,3 +11,5 @@ deploy:
   skip_cleanup: true
   on:
     branch: master
+    # tags: true
+    repo: BenBrewerBowman/react-lazy-mount
