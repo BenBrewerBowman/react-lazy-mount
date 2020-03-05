@@ -50,22 +50,20 @@ export const Example = () => {
   return (
     // once trigger prop becomes "true" for the first time, 
     // mycomponent will be lazy loaded, then mounted
-    <LazyMount trigger={state} >
-      // I'm optional
-      <Suspense fallback={...} >
-        <MyComponent />
-      </Suspense>
+    <LazyMount trigger={state} fallback={...} >
+      <MyComponent />
     </LazyMount>
   );
 };
 ```
 
-Lazy mounting can be coupled with lazy loading to wait for a condition to be met in order to both load the module and render the component.
+Lazy mounting can be coupled with lazy loading to wait for a condition to be met in order to both load the module and render the component. When given the fallback prop, the component will mount with lazy loading (Suspense). 
 
 | Props | Type | Default Value | Description 
 | ----------- | ----------- | ------- | --------
 | trigger | Boolean | false | Trigger that listens for the first truthy value to render the `children` prop
 | children | ReactNode[] | | Component(s) that will be mounted once the trigger becomes true for the first time, and stay mounted regardless of any future trigger changes.
+| fallback | NonNullable<ReactNode>\|null | | Loads with suspense under the hood. Will render fallback during lazy loading
 
 ## License
 
