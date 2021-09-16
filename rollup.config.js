@@ -16,7 +16,7 @@ export default {
       sourcemap: true
     },
     {
-      file: 'dist/indes.es.js',
+      file: 'dist/index.es.js',
       format: 'es',
       exports: 'named',
       sourcemap: true
